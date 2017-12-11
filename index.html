@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Sendengo</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+</head>
+<body>
+  <!-- Header -->
+  <div id="index-banner" class="parallax-container">
+    <div class="navbar-fixed">
+     <nav class="black" role="navigation">
+      <div class="nav-wrapper ">
+        <img src="img/logotipo.svg" id="logo-container" href="#" class="brand-logo">
+        <ul class="right hide-on-med-and-down">
+         <li><a href="#" class="nav--color">Contactanos</a></li>
+         <li><a href="#" class="nav--color" id="navpublicacarga" style="display: none;">PUBLICA TU CARGA</a></li>
+         <li><a href="#" class="nav--color" id="navregistraflota" style="display: none;">REGISTRA TU FLOTA</a></li>
+         <li><a href="#" class="nav--color">REGISTRATE</a></li>
+         <li><a href="#" class="nav--color">INICIAR SESIÓN</a></li>
+       </ul>
+       <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </div>
+</nav>
+<div class="section no-pad-bot">
+  <div >
+    <br><br>
+    <div class="row header_info" >
+      <div class="col l3 m2 s12">
+       <img src="img/persona1.png " class="header__personas--izquierda">
+       <img src="img/persona2.png " class="header__personas--derecha">
+     </div >
+     <div class="col l9 m10 s12">
+      <div class="formulario-publicar formularion-publicar-carga" style="display: none" id="formulario-publica-carga">
+       <div class="row  container formulario">
+        <div class=" col l4 "> 
+          <select class="input-field" id="categoria">
+            <option value="valorpordefecto" class="browser-default" >Categoria</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Categoria de tu carga</label>
+        </div>
+        <div class=" col l4 "> 
+          <select class="input-field" id="tipo">
+            <option value="valorpordefecto" >Tipo</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Tipo</label>
+          <select class="input-field" id="subtipo">
+            <option value="valorpordefecto" >Subtipo</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Categoria de tu carga</label>
+        </div>
+
+        <div class=" col l4 s4 center">
+
+        </div>
+      </div>
+
+      <div class="row container">
+        <div class="col l4 input-field">
+          <input placeholder="Ciudad de Origen" id="origen" type="text" class="validate">
+          <label for="first_name">Origen</label>
+        </div>
+        <div class="col l4 input-field">
+          <input placeholder="Ciudad de destino" id="destino" type="text" class="validate">
+          <label for="first_name">Destino</label>
+        </div>
+        <div class="col l4 input-field">
+          <input placeholder="Año/Mes/Dia" id="fecha" type="text" class="datepicker validate">
+          <label for="first_name">Fecha de Recoleccion</label>
+        </div>
+      </div>
+
+      <div class="row container">
+        <div class="col l4 input-field">
+          <input placeholder="$ sin IVA" id="tarifa" type="text" class="validate">
+          <label for="first_name">Tarifa</label>
+        </div>
+        <div class="col l8">
+         <div class="switch">
+          <label>
+            Off
+            <input type="checkbox" id="condiciones">
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+        <span class="terminos" id="terminos">ACEPTO, TÉRMINOS, CONDICIONES Y AVISO DE PRIVACIDAD</span>
+      </div>
+    </div>
+    <div class="row container">
+     <button class="btn-large" onclick="validar()">PUBLICA TU CARGA</button>
+   </div>
+
+ </div>
+
+ <div class="container formulario-publicar" id="formulario-publicar-flota" style="display: none;">
+  <div class="row container">
+    <div class="col l4  input-field">
+      <input type="text" name="" class="form__input validate" id="nombre">
+      <label>Nombre</label>
+    </div>
+    <div class="col l4 input-field">
+      <input type="text" name="" class="form__input validate" id="apellidopaterno">
+      <label>Apellido Paterno</label>
+    </div>
+    <div class="col l4 input-field">
+      <input type="text" name="" class="form__input validate" id="apellidomaterno">
+      <label>Apellido Materno</label>
+    </div>
+  </div>
+  <div class="row container" class="form__input validate">
+    <div class="col l4 input-field">
+      <input type="text" name="" class="validate" id="correo">
+      <label>Correo Electronico</label>
+    </div>
+    <div class="col l4 input-field">
+      <input type="text" name="" class="form__input validate" id="cel">
+      <label>Numero Celular</label>
+    </div>
+    <div class="col l4 input-field"></div>
+  </div>
+  <div class="row container">
+    <div class="col l4">
+      <p class="seleccion">
+        <input type="checkbox" id="CajaSeca" />
+        <label for="CajaSeca">Caja Seca</label>
+      </p>
+      <p class="seleccion">
+        <input type="checkbox" id="CajaRefrigerada" />
+        <label for="CajaRefrigerada">Caja Refrigerada</label>
+      </p>
+      <p class="seleccion">
+        <input type="checkbox" id="contenedorIntermodal" />
+        <label for="contenedorIntermodal">contenedor Intermodal</label>
+      </p>
+      <p class="seleccion">
+        <input type="checkbox" id="Vehiculopequeño" />
+        <label for="Vehiculopequeño">Vehiculo pequeño</label>
+      </p>
+      <p class="seleccion">
+        <input type="checkbox" id="VehiculoEspecializado" />
+        <label for="VehiculoEspecializado">Vehiculo Especializado</label>
+      </p class="seleccion">
+      <p class="seleccion">
+        <input type="checkbox" id="Hazmat" />
+        <label for="Hazmat">Hazmat</label>
+      </p>
+      <p class="seleccion">
+        <input type="checkbox" id="Consolidado" />
+        <label for="Consolidado">Consolidado</label>
+      </p>
+    </div>
+    <div class="col l8">
+      <div class="switch">
+        <label>
+
+          <input type="checkbox" id="terminoycondicion">
+          <span class="lever"></span>
+
+        </label>
+      </div>
+      <span class="termino_flota">ACEPTO, TÉRMINOS, CONDICIONES Y AVISO DE PRIVACIDAD</span>
+      <button class="btn-large btn_flota" onclick="validarFlota()">GUARDA TU FLOTAs</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="titulo_header" >
+ <h1 class="header  white-text right-align" >La <strong>MEJOR</strong>  herramienta para transporte de carga</h1>
+ <span class="header col s12 light right-align" >¡Descarga hoy nuestra aplicación!</span>
+
+</div>
+
+<div class="header__btn right-align" >
+  <a onclick="verificaClick(event);" class="btn-large header__btn--publica show" id="1">PUBLICA TU CARGA</a>
+  <a onclick="verificaClick(event);"  class="btn-large  header__btn--registra show" id="2">REGISTRA TU FLOTA</a>
+</div>
+<br><br>  
+</div>
+</div> 
+</div>   
+</div>
+<div class="parallax"><img src="img/inicio.jpg" alt="Unsplashed background img 1"></div>
+<div class="black header__contacto">
+  <div class="row">
+    <div class="col l4 s12 center">
+      <p>¡CONTÁCTANOS!</p>  
+    </div>
+    <div class="col l4 s12 center">
+      <img src="img/google-play.svg" class="header__contacto--tamaño center">
+    </div>
+    <div class="col l4 s12 center">
+      <img src="img/operator.svg" class="header__contacto--tamaño">
+      <span>(55) 5510- 1128</span>
+      
+    </div> 
+  </div>
+</div>
+</div>
+<!-- Termina Header -->
+
+
+<div class="container">
+  <div class="section">
+    <!--   Tipo Vehiculos y Cargas   -->
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="icon-block">
+          <img  src="img/tipo-vehiculos.svg" class="center icon__tipo">
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="icon-block">
+          <img src="img/tipo-carga.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Termia Tipo Vehiculos y Cargas -->
+
+<!-- Que es Sedengo -->
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row left-align">
+        <div class="col s12 l6 texto__informacion">
+          <h5 class="texto__informacion">¿Qué es SENDENGO?</h5>
+          <p>Sendengo es una plataforma de asignación de carga que facilita herramientas tecnológicas a transportistas y clientes.</p>
+          <p>Somos el punto de encuentro para nuestra comunidad. Buscamos crear el futuro del autotransporte de carga en México brindando soluciones para cada sector de la industria.</p>
+          <p>Sendengo es el siguiente paso y nos enfocamos en llenar tus vacíos con servicios de profesionalización, capacitaciones, herramientas inteligentes y también te ayudamos a llenar regresos vacíos.</p>
+          <div class="btn-large texto__informacion__boton">
+            <a href="" class="white-text texto__informacion">PREGUNTAS FRECUENTES</a>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="img/quien.jpg" alt="Unsplashed background img 2"></div>
+</div>
+<!-- Termina Que es Sendengo -->
+
+
+<!-- Como funciona Sendego -->
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col s12 center">
+        <h3><i class="mdi-content-send brown-text"></i></h3>
+        <h2 class="funcion__titulo">¿Cómo funciona? </h2>
+      </div>
+      <div class="col s12 m4 center">
+        <div class="icon-block">
+          <img  src="img/publica.svg" class="responsive-img funcion__imagen">
+          <h3 class="funcion__subtitulo">PUBLICA</h3>
+          <strong class="funcion__general">Dinos que quieres transportar.</strong>
+          <P class="funcion__general">Espera a que te contacten transportistas.</P>
+        </div>
+      </div>
+      <div class="col s12 m4 center">
+        <div class="icon-block">
+          <img  src="img/encuentra.svg" class="center funcion__imagen">
+          <h3 class="funcion__subtitulo">ENCUENTRA</h3>
+          <strong class="funcion__general">Accede a cargas de todo tipo de clientes.</strong>
+          <p class="funcion__general">Sendengo ordena las más atractivas para ti.</p>
+        </div>
+      </div>
+      <div class="col s12 m4 center">
+        <div class="icon-block">
+          <img  src="img/crece.svg" class="center funcion__imagen">
+          <h3 class="funcion__subtitulo">CRECE</h3>
+          <strong class="funcion__general">Aprovecha nuestras herramientas</strong>
+          <p class="funcion__general">y ofrece cada vez un mejor servicio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Termina Como funciona Sendengo -->
+
+<!-- Beneficios de Sendengo -->
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div >
+      <div class="row center">
+        <div class="col l6"></div>
+        <div class="col l6 s12">
+          <h2 class="header light beneficios">¿CUÁLES SON LOS BENEFICIOS?</h2>
+          <h3 class="beneficios"><strong>FÁCIL</strong> de Usar</h3>
+          <p class="beneficios">Simplifica procesos con un par de clicks</p>
+          <h3 class="beneficios"><strong>CONTACTO</strong> directo</h3>
+          <p class="beneficios">Somos el intermediario menos invasivo en la industria de transporte de carga</p>
+          <h3 class="beneficios"><strong>ACCESO</strong> a todo tipo de clientes</h3>
+          <p class="beneficios">Desde clientes corporativos a quién quiere mover una moto</p>
+          <h3 class="beneficios"><strong>COMUNIDAD</strong> de transportistas</h3>
+          <p class="beneficios">Accede a nuestra comunidad de transportistas Sedengo</p>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="img/beneficios.jpg" alt="Unsplashed background img 3"></div>
+</div>
+<!--Termina Beneficios de Sendengo -->
+
+<!-- contacto y footer -->
+<footer class="page-footer white">
+  <div class="container">
+    <div class="row">
+      <div class="col l12 s12 center">
+        <h2 class="form-contacto">¡CONTÁCTANOS!</h2>
+        <p class="form-contacto">Déjanos tus datos y así podamos resolver tus dudas</p>
+      </div>
+      <div class="input-field col l12 s12 center">
+        <input placeholder="Nombre (requerido)" id="first_name" type="text" class="validate">
+        
+      </div>
+      <div class="input-field col l12 s12 center">
+        <input placeholder="Teléfono (requerido)" id="first_name" type="text" class="validate">
+      </div>
+      <div class="input-field col l12 s12 center">
+        <input placeholder="Correo electrónico (requerido)" id="first_name" type="text" class="validate">
+      </div>
+      <div class="input-field col l12 s12 center">
+        <textarea placeholder="Mensaje..." id="first_name" type="text" class="validate"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright black">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <img src="img/logotipo.svg">
+        </div>
+        <div class="col l4 s12 block_blog">
+          <span class="blog">BLOG</span>
+          <span class="blog">PRENSA</span>
+        </div>
+        <div class="col l4 s12 block_iconos">
+          <div class="redes-sociales"><i class="fa fa-facebook iconoletra fa-2x" aria-hidden="true"></i></div>
+          <div class="redes-sociales"><i class="fa fa-twitter iconoletra fa-2x" aria-hidden="true"></i></div>
+          <div class="redes-sociales"><i class="fa fa-linkedin iconoletra fa-2x" aria-hidden="true"></i></div>
+          <div class="redes-sociales"><i class="fa fa-youtube iconoletra fa-2x" aria-hidden="true"></i></div>
+
+        </div>
+      </div>
+      <hr>
+      <a class="brown-text text-lighten-3" href="http://materializecss.com">® Derechos reservados. Grupo de Optimizacion Logistica GESR S.A de C.V. Prohibida su reproducción total o parcial.</a>
+    </div>
+  </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>

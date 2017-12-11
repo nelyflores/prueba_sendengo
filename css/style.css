@@ -1,0 +1,271 @@
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+.parallax-container {
+  min-height: 670px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+  width: 100%;
+
+}
+
+/*Header*/
+
+nav{
+  margin-top: 30px;
+  width: 95%;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #FFFFFF;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 800;
+}
+#navpublicacarga {
+  background-color: #37AB30;
+  border-radius: 12px;
+}
+#navregistraflota{
+  background-color: #37AB30;
+  border-radius: 12px;
+
+}
+#logo-container{
+  margin-left: 60px;
+  padding: 4px;
+}
+.header__btn{
+  margin-bottom: 128px;
+}
+.header__personas--izquierda{
+ position: absolute;
+ margin-top: 165px;
+ z-index: 1;
+}
+.header__personas--derecha{
+  margin-left: 258px;
+
+  position: absolute;
+
+  margin-top: 142px;
+}
+.header__contacto{
+  position: absolute;
+
+  margin-top: 123px;
+
+  width: 100%;
+  z-index: 1;
+}
+.btn-large{
+  background-color: #37AB30;
+  color: black;
+  border-radius: 40px;
+  margin-right: 120px;
+  font-weight: 800;
+}
+p {
+  line-height: 2rem;
+}
+.button-collapse {
+  color: #26a69a;
+}
+h1.header{
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+span.header{
+  margin-bottom: 79px;
+  font-size: 24px;
+}
+.header__contacto{
+  height:  100px;
+}
+.header__contacto--tamaño{
+  width: 170px;
+  height: 65px;
+}
+
+/* Que es sedengo */
+.texto__informacion{
+  text-align: justify;
+}
+h5.texto__informacion{
+  font-weight: 800;
+}
+.btn-large.texto__informacion__boton{
+  background:transparent;
+  border:solid 1px white;
+
+}
+
+/*Como funciona Sendengo */
+.funcion__titulo{
+  font-weight: 800;
+}
+.funcion__imagen{
+  width: 90px;
+  height: 90px;
+}
+.funcion__subtitulo{
+  font-weight: 800;
+  font-size: 30px;
+}
+.funcion__general{
+  color: #37AB30;
+}
+strong.funcion__general{
+  font-weight: 700;
+}
+p.funcion__general{
+  margin:-7px;
+
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/*Beneficios*/
+
+h2.beneficios{
+  font-size: 30px;
+  font-weight: 800;
+}
+h3.beneficios{
+  color: #37AB30;
+  font-size: 20px;
+  text-align: justify;
+}
+h3.beneficios strong{
+  font-weight: 700;
+}
+p.beneficios{
+  text-align: justify;
+
+  line-height: 1px;
+}
+
+/*Contacto y footer*/
+.form-contacto{
+  color: black;
+}
+h2.form-contacto{
+  font-weight: 800;
+}
+/*formulario publicar*/
+.formulario-publicar{
+  background: #EBEBEB;
+  opacity: 0.8;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 27px;
+  border-radius: 17px;
+}
+.formularion-publicar-carga{
+  height: 310px;
+  margin-top: 43px;
+}
+
+input[type=text]:not(.browser-default){
+
+
+  color: #555555;
+  height: 38px;
+  margin-bottom: -13px;
+
+}
+input[type=text]:not(.browser-default).validate + label{
+  color: #37AB3B;
+}
+.terminos{
+  font-size: 11px;
+  color: #37AB30;
+  position: relative; */
+
+  margin-left: 74px;
+
+  margin-top: -5px;
+  position: absolute;
+
+}
+.switch{
+  text-align: justify;
+}
+.termino_flota{
+  font-size: 8px;
+  margin-left: 66px;
+  color: green;
+}
+.btn_flota{
+  font-size: 11px;
+  margin-top: 29px;
+}
+.seleccion{
+  line-height: 1px;
+  text-align: justify;
+  font-size: 1px;
+}
+.block_iconos{
+  display: flex;
+  justify-content: space-around;
+}
+.redes-sociales{
+  background: green;
+  border-radius: 50%;
+  width: 57px;
+  height: 57px;
+  position: relative;
+}
+.iconoletra{
+  position: relative;
+  margin: 17px;
+  color: black;
+}
+.block_blog{
+  display: flex;
+}
+.blog{
+ margin-top: 22px;
+
+ margin-left: 100px;
+}
+textarea{
+  color:black;
+}
+
+
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
